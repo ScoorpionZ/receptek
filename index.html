@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <title>Váradi Ákos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="json.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div></div>
+        <main>
+            <header>
+                <h1>Receptkönyv</h1>
+            </header>
+            <nav>
+                <!-- 4feladat -->
+                <div class="dropdown">
+                    <button class="dropbtn">Rendezés</button>
+                    <div class="dropdown-content">
+                        <a id="neve" href="#">Recept név</a>
+                        <a id="ido" href="#">Elkészítési idő</a>
+                        <a id="leiras" href="#">Leírás</a>
+                        <a id="kep" href="#">Kép</a>
+                        <a id="osszetevok" href="#">Hozzávalók</a>
+                        <a id="kategoriak" href="#">Típus</a>
+                        <a id="ar" href="#">Ár</a>    
+                    </div>
+                </div>
+                
+                <!-- 10feladat -->
+                <br>
+                <label for="receptNev">Keresés</label>
+                <select class="tipuskers" id="tipuskeres">
+                    <option id="foetel" value="főétel">főétel</option>
+                    <option id="edesseg" value="édesség">édesség</option>
+                    <option id="leves" value="leves">leves</option>
+                </select>
+                <input type="button" id="kerestius" value="kerestius">
+                
+                <!-- 11feladat -->
+                <br>
+                <label for="arhatar">Ár:</label>
+                <label for="minert">0</label>
+                <input type="range" id="arhatar" name="arhatar" min="0" max="300" value="150">
+                <label for="minert">300</label>
+                <input type="button" id="arkeres" value="arkeres">
+                
+
+                <!-- 12feladat -->
+                <br>
+                <input type="text" name="receptNev" id="keresettSzoveg" placeholder="">
+                <input type="button" id="keres" value="keres">
+            </nav>
+            <!-- 5feladat -->
+            <aside>
+                <form>
+                    <fieldset>
+                        <div>
+                            <label for="nev">Recept név:</label>
+                            <input type="text" id="nev" name="nev" placeholder="Somlói Galuska">
+                        </div>
+
+                        <div>
+                            <label for="eido">Elkészítési idő: </label>
+                            <input type="number" id="eido" name="eido" placeholder="60">
+                        </div>
+
+                        <div>
+                            <label for="leir">Leírás: </label>
+                            <input type="text" id="leir" name="leir" placeholder="Így készül a Somlói Galuska">
+                            <!-- <textarea id="leir" name="leir" rows="4" cols="50">	</textarea> -->
+                        </div>
+                        <div>
+                            <label for="kepeler">Kép: </label>
+                            <input type="text" id="kepeler" name="kepeler" placeholder="kepek/somloi.jpg">
+                        </div>
+                        <!-- <div>
+                            <label for="osszetevok">Hozzávalók:</label>
+                            <textarea id="osszetevok" name="osszetevok" rows="4" cols="50"></textarea>
+                        </div> -->
+                        <div>
+                            <label for="kategoriak">Típus: </label>
+                            <input type="text" id="kategoriak" name="kategoriak" placeholder="desszer">
+                        </div>
+                        <div>
+                            <label for="ara">Ár(ft): </label>
+                            <input type="number" id="ara" name="ara" placeholder="2000">
+                        </div>
+                    </fieldset>
+
+                        <input type="button" id="OK" name="Ok" value="OK">
+
+                </form>
+            </aside>
+            
+            <article>
+
+            </article>
+            <section>
+                <div id="bal"><<</div>
+                <div id="recept"></div>
+                <div id="jobb">>></div>
+                
+            </section>
+            <footer> 
+                <p>Váradi Ákos</p> 
+            </footer>
+        </main>
+    </body>
+</html>
